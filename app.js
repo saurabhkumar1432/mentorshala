@@ -1,7 +1,7 @@
 // import mongoose from 'mongoose';
 const express = require('express');
 const app = express();
-const port = process.env.PORT || 5500; //port number 5500
+// const port = process.env.PORT || 5500; //port number 5500
 const path = require('path');
 let alert = require('alert');
 const bodyparser = require('body-parser');
@@ -679,7 +679,6 @@ let googleobj = require('./js/google-config.js');
 console.log(googleobj.name);
 
 
-
-app.listen(port, '127.0.0.1', () => {
-  console.log(`The application started successfully on port ${port}`);
-})
+var port_number = server.listen(process.env.PORT || 5500);
+app.listen(port_number);
+console.log("Server is running on port 3000");
