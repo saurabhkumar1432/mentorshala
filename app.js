@@ -679,6 +679,6 @@ let googleobj = require('./js/google-config.js');
 console.log(googleobj.name);
 
 
-var port_number = server.listen(process.env.PORT || 5500);
+var port_number = app.listen(process.env.PORT || 5500);
 app.listen(port_number);
-console.log("Server is running on port 3000");
+console.log("Server is running");
