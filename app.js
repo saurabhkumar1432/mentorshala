@@ -1,7 +1,7 @@
 // import mongoose from 'mongoose';
 const express = require('express');
 const app = express();
-const port = 5500; //port number 5500
+const port = process.env.PORT || 5500; //port number 5500
 const path = require('path');
 let alert = require('alert');
 const bodyparser = require('body-parser');
