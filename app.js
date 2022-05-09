@@ -404,7 +404,7 @@ app.post('/registrationMentor', (req, res) => {
   // }
 })
 app.post('/send',(req,res)=>{
-    if (req.body.otp == otp&&req.body.passwordRepeat == passwordGlobal)
+    if (req.body.otp == otp)
       res.render("mentor-registration");
     else
       alert("Wrong OTP or password");
@@ -457,7 +457,7 @@ app.post('/registrationMentee', (req, res) => {
   // }
 })
 app.post('/send1',(req,res)=>{
-  if (req.body.otp == otp&&req.body.passwordRepeat == passwordGlobal)
+  if (req.body.otp == otp)
     res.render("mentee-registration");
   else
   alert("Wrong OTP or password");
