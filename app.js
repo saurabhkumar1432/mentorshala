@@ -1,7 +1,7 @@
 // import mongoose from 'mongoose';
 const express = require('express');
 const app = express();
-const port = 5500; //port number 5500
+// const port = process.env.PORT || 5500; //port number 5500
 const path = require('path');
 let alert = require('alert');
 const bodyparser = require('body-parser');
@@ -404,8 +404,11 @@ app.post('/registrationMentor', (req, res) => {
   // }
 })
 app.post('/send',(req,res)=>{
+<<<<<<< HEAD
   console.log("password is"+passwordGlobal+"body is"+req.body.otp+req.body.passwordRepeat);
 
+=======
+>>>>>>> de0a4610e174c9177ff4465658d18d5d0a1710d2
     if (req.body.otp == otp)
       res.render("mentor-registration");
     else
@@ -459,7 +462,7 @@ app.post('/registrationMentee', (req, res) => {
   // }
 })
 app.post('/send1',(req,res)=>{
-  if (req.body.otp == otp&&req.body.passwordRepeat == passwordGlobal)
+  if (req.body.otp == otp)
     res.render("mentee-registration");
   else
   alert("Wrong OTP or password");
@@ -681,7 +684,6 @@ let googleobj = require('./js/google-config.js');
 console.log(googleobj.name);
 
 
-
-app.listen(port, '127.0.0.1', () => {
-  console.log(`The application started successfully on port ${port}`);
-})
+var port_number = app.listen(process.env.PORT || 5500);
+app.listen(port_number);
+console.log("Server is running");
