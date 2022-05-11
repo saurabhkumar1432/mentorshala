@@ -368,8 +368,8 @@ let transporter = nodemailer.createTransport({
   service: 'gmail',
 
   auth: {
-    user: 'chaturvedi.a20@iiits.in',
-    pass: 'iiits@2020',
+    user: ,
+    pass: ,
   }
 
 });
@@ -404,7 +404,9 @@ app.post('/registrationMentor', (req, res) => {
   // }
 })
 app.post('/send',(req,res)=>{
-    if (req.body.otp == otp&&req.body.passwordRepeat == passwordGlobal)
+  console.log("password is"+passwordGlobal+"body is"+req.body.otp+req.body.passwordRepeat);
+
+    if (req.body.otp == otp)
       res.render("mentor-registration");
     else
       alert("Wrong OTP or password");
