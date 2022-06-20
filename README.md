@@ -3,10 +3,7 @@
 github repo link : https://github.com/saurabhkumar1432/MentorShala
 
 
-
-This is a static link for website .....dynamic website coming soon
-
-https://saurabhkumar1432.github.io/MentorShala/
+Website link : https://mentorshala.herokuapp.com/
 
 
 
